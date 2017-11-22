@@ -1,0 +1,3 @@
+block('quiz')(
+    js()(true)
+);
