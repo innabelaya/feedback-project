@@ -1,8 +1,12 @@
-/*.feedback
-{
-    position: relative;
-    margin: 10px;
+.feedback {
     padding: 10px;
+}
 
-    
-}*/
+.feedback__header {
+    margin: 0 0 14px;
+    font-weight: 400;
+}
+
+.feedback__questions {
+    margin-bottom: 14px;
+}

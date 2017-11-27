@@ -1,9 +1,14 @@
 ({
     shouldDeps: [
-    	{ elems: 'form' },
-        { elems: 'header' },
-        { elems: 'body' },
-        { block: 'modal' },
+    	{ block: 'form' },
+        {
+            block: 'radio-group',
+            mods: {
+                theme: 'islands',
+                size: 'm',
+                type: 'line'
+            }
+        }
     ]
 })
 

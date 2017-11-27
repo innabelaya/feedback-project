@@ -1,7 +1,13 @@
-.quiz
-{
+.quiz {
 	max-width: 760px;
-    margin: 48px 0 16px 10px;
-    padding: 0 10px;
+    padding: 12px;
     background: rgba(0,0,0,.1);
+}
+
+.quiz__accept.quiz__accept {
+    margin-right: 12px;
+}
+
+.quiz__text {
+    margin-bottom: 12px;
 }

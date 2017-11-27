@@ -72,6 +72,104 @@ app.get('/', function(req, res) {
                 url: 'https://site.com',
                 siteName: 'Site name'
             }
+        },
+        quiz: {
+            quizText: 'Текст опроса на глагне',
+            title: 'Еще заголовок',
+            questions: [
+                {
+                    text: 'WTF?',
+                    name: 'q1',
+                    options: [
+                        {
+                            val: 'better',
+                            text: 'стало ли лучше?'
+                        },
+                        {
+                            val: 'worse',
+                            text: 'стало хуже'
+                        },
+                        {
+                            val: 'same',
+                            text: 'кому не пох'
+                        }
+                    ]
+                },
+                {
+                    text: 'Кому?',
+                    name: 'q2',
+                    options: [
+                        {
+                            val: 'better',
+                            text: 'никому!'
+                        },
+                        {
+                            val: 'worse',
+                            text: 'никому :('
+                        },
+                        {
+                            val: 'same',
+                            text: 'никому...'
+                        }
+                    ]
+                }
+            ]
+        }
+    })
+});
+
+app.get('/vtoraya', function(req, res) {
+    render(req, res, {
+        view: 'page-index',
+        title: 'Main page',
+        meta: {
+            description: 'Page description',
+            og: {
+                url: 'https://site.com',
+                siteName: 'Site name'
+            }
+        },
+        quiz: {
+            quizText: 'A tak?',
+            title: 'Заголовок опроса',
+            questions: [
+                {
+                    text: 'WTF?',
+                    name: 'q1',
+                    options: [
+                        {
+                            val: 'better',
+                            text: 'стало лучше'
+                        },
+                        {
+                            val: 'worse',
+                            text: 'стало хуже'
+                        },
+                        {
+                            val: 'same',
+                            text: 'не вижу разницы'
+                        }
+                    ]
+                },
+                {
+                    text: 'Кому?',
+                    name: 'q2',
+                    options: [
+                        {
+                            val: 'better',
+                            text: 'никому!'
+                        },
+                        {
+                            val: 'worse',
+                            text: 'никому :('
+                        },
+                        {
+                            val: 'same',
+                            text: 'никому...'
+                        }
+                    ]
+                }
+            ]
         }
     })
 });

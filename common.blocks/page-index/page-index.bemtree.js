@@ -1,7 +1,5 @@
 block('page-index').content()(function() {
     return [
-        {
-            block: 'quiz'
-        }
-    ]
+        Object.assign({ block: 'quiz' }, this.data.quiz)
+    ];
 });

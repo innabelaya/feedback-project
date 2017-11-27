@@ -1,18 +1,14 @@
-    ({
+({
+    mustDeps: 'i-bem-dom',
     shouldDeps: [
-    	'i-bem-dom',
-        { elems: 'content' },
+        { mods: { disabled: true } },
         {
             block: 'button',
             mods: { theme: 'islands', size: 'm', view: 'action' }
         },
         {
-        	block: 'modal',
-        	mods: { theme: 'islands', autoclosable: true }
-        },
-        {
-            block: 'quiz',
-            mods: { disabled: true }
+            block: 'modal',
+            mods: { theme: 'islands', autoclosable: true, 'has-close': true }
         },
         {
             block: 'feedback'

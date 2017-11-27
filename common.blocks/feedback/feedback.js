@@ -1,4 +1,4 @@
-modules.define('feedback', ['i-bem-dom', 'button', 'radio-group'], 
+modules.define('feedback', ['i-bem-dom', 'button', 'radio-group'],
     function(provide, bemDom, Button, RadioGroup) {
 
     const Feedback = bemDom.declBlock('feedback', {
@@ -12,10 +12,10 @@ modules.define('feedback', ['i-bem-dom', 'button', 'radio-group'],
 
         _onClick: function() {
             this.toggleMod('disabled');
-        }, 
+        },
 
         _submitForm(event) {
-            
+
         },
 
         _closeQuiz(event) {
@@ -32,20 +32,3 @@ modules.define('feedback', ['i-bem-dom', 'button', 'radio-group'],
     provide(Feedback);
 
 });
-
-
-// modules.define('box', ['i-bem-dom'], function(provide, bemDom) {
-
-//     provide(bemDom.declBlock('box', {
-//         _onClick: function() {
-//             this.toggleMod('closed', 'yes');
-//         }
-//     }, {
-//         lazyInit: true,
-
-//         onInit : function() {
-//             this._domEvents().on('click', this.prototype._onClick);
-//         }
-//     }));
-
-// });
