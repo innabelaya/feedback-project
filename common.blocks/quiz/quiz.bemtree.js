@@ -1,7 +1,7 @@
-block('quiz').content()(function() {
-        return {
-            elem: 'content',
-            content: this.ctx.content
-		};
-  	}
-)
+// block('quiz').content()(function() {
+//         return {
+//             elem: 'content',
+//             content: this.ctx.content
+// 		};
+//   	}
+// )

@@ -1,13 +1,9 @@
 ({
     shouldDeps: [
-    	{ elems: 'title' }
-        // {
-        //     block: 'button',
-        //     mods: { type: 'submit', theme: 'islands', size: 'm' }
-        // },
-        // {
-        // 	block: 'form'
-        // }
+    	{ elems: 'form' },
+        { elems: 'header' },
+        { elems: 'body' },
+        { block: 'modal' },
     ]
 })
 

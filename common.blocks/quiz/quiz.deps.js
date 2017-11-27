@@ -1,10 +1,10 @@
-({
+    ({
     shouldDeps: [
     	'i-bem-dom',
         { elems: 'content' },
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'm' }
+            mods: { theme: 'islands', size: 'm', view: 'action' }
         },
         {
         	block: 'modal',
@@ -13,6 +13,9 @@
         {
             block: 'quiz',
             mods: { disabled: true }
+        },
+        {
+            block: 'feedback'
         }
     ]
 })

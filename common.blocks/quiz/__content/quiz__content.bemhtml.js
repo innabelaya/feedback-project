@@ -7,7 +7,8 @@ block('quiz').elem('content').content()(function() {
             block: 'button',
             mods: {
                 theme: 'islands',
-                size: 'm'
+                size: 'l',
+                view: 'action'
             },
             mix: { block: 'quiz', elem: 'accept' },
             text: 'Accept'
@@ -16,7 +17,7 @@ block('quiz').elem('content').content()(function() {
             block: 'button',
             mods: {
                 theme: 'islands',
-                size: 'm'
+                size: 'l'
             },
             mix: { block: 'quiz', elem: 'decline' },
             text: 'Decline'
@@ -24,7 +25,7 @@ block('quiz').elem('content').content()(function() {
         {
         	block: 'modal',
         	mods: { theme: 'islands', autoclosable: true },
-        	content: 'uefcecvbwlicelcjdb'
+        	content: { block: 'feedback' }
         }
     ]
 });
