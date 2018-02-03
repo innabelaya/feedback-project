@@ -1,6 +1,4 @@
 ({
-    shouldDeps: {
-        block: 'page',
-        mods: { theme: 'islands' }
-    }
+    mustDeps: 'i18n',
+    shouldDeps: 'page'
 })

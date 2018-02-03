@@ -1,17 +1,18 @@
 ({
-    mustDeps: 'i-bem-dom',
+    mustDeps: ['i-bem-dom', 'i18n'],
     shouldDeps: [
-        { mods: { disabled: true } },
+        'heading',
+        'quiz-feedback',
+        {
+            elems: ['inner', 'table', 'title', 'accept', 'decline', 'close']
+        },
         {
             block: 'button',
-            mods: { theme: 'islands', size: 'm', view: 'action' }
+            mods: { theme: 'islands', size: 'l', view: 'action' }
         },
         {
             block: 'modal',
             mods: { theme: 'islands', autoclosable: true, 'has-close': true }
-        },
-        {
-            block: 'feedback'
         }
     ]
 })

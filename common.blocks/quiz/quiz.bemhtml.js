@@ -3,36 +3,45 @@ block('quiz')(
     content()(function() {
         return [
             {
-                elem: 'text',
-                content: this.ctx.quizText
-            },
-            {
-                block: 'button',
-                mods: {
-                    theme: 'islands',
-                    size: 'l',
-                    view: 'action'
-                },
-                mix: { block: 'quiz', elem: 'accept', js: true },
-                text: 'Accept'
-            },
-            {
-                block: 'button',
-                mods: {
-                    theme: 'islands',
-                    size: 'l'
-                },
-                mix: { block: 'quiz', elem: 'decline', js: true },
-                text: 'Decline'
-            },
-            {
-                block: 'modal',
-                mods: { theme: 'islands', autoclosable: true, 'has-close': true },
-                content: {
-                    block: 'feedback',
-                    title: this.ctx.title,
-                    questions: this.ctx.questions
-                }
+                elem: 'inner',
+                content: [
+                    {
+                        elem: 'table',
+                        content: [
+                            {
+                                block: 'heading',
+                                mods: { level: 3 },
+                                mix: { block: this.block, elem: 'title' },
+                                content: this.i18n(this.block, 'title')
+
+                            },
+                            {
+                                block: 'button',
+                                mods: { theme: 'islands', size: 'l', view: 'action' },
+                                mix: { block: 'quiz', elem: 'accept', js: true },
+                                text: this.i18n(this.block, 'button-yes')
+
+                            },
+                            {
+                                block: 'button',
+                                mods: { theme: 'islands', size: 'l' },
+                                mix: { block: 'quiz', elem: 'decline', js: true },
+                                text: this.i18n(this.block, 'button-no')
+                            }
+                        ]
+                    },
+                    {
+                        block: 'modal',
+                        mods: { theme: 'islands', autoclosable: true, 'has-close': true },
+                        content: {
+                            block: 'quiz-feedback',
+                            questions: this.ctx.questions
+                        }
+                    },
+                    {
+                        elem: 'close'
+                    }
+                ]
             }
         ];
     })

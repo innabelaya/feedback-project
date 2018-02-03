@@ -5,7 +5,8 @@ var fs = require('fs'),
     notifier = require('node-notifier'),
     make = require('enb').make,
     watch = require('chokidar').watch,
-
+    config = require('./config'),
+    langs = config.langs,
     rootDir = path.join(__dirname, '..'),
     watchOpts = {
         persistent: true,
@@ -54,7 +55,14 @@ process.env.NO_LIVERELOAD || watch([
     path.join(rootDir, 'static', '*.min.*'),
     path.join(bundlesDir, '*', '*.bemtree.js'),
 ].concat(bundles.map(function(bundle) {
-    return path.join(bundlesDir, bundle, bundle + '.bemhtml.js');
+    var p;
+    
+    langs.forEach(lang => {
+        p = path.join(bundlesDir, bundle, bundle + '.' + lang + '.bemhtml.js');
+    });
+
+    return p;
+
 })), watchOpts).on('all', function(event, file) {
     tinyLr.changed(file);
 });

@@ -65,7 +65,7 @@ app.get('/ping/', function(req, res) {
 app.get('/', function(req, res) {
     render(req, res, {
         view: 'page-index',
-        title: 'Main page',
+        title: 'page-index',
         meta: {
             description: 'Page description',
             og: {
@@ -74,11 +74,9 @@ app.get('/', function(req, res) {
             }
         },
         quiz: {
-            quizText: 'Текст опроса на глагне',
-            title: 'Еще заголовок',
             questions: [
                 {
-                    text: 'WTF?',
+                    text: 'Насколько вам понятен документ?',
                     name: 'q1',
                     options: [
                         {
@@ -91,7 +89,7 @@ app.get('/', function(req, res) {
                         },
                         {
                             val: 'same',
-                            text: 'кому не пох'
+                            text: 'кому '
                         }
                     ]
                 },
@@ -112,65 +110,28 @@ app.get('/', function(req, res) {
                             text: 'никому...'
                         }
                     ]
+                },
+                {
+                    text: 'Как?',
+                    name: 'q2',
+                    options: [
+                        {
+                            val: 'better',
+                            text: 'никому!'
+                        },
+                        {
+                            val: 'worse',
+                            text: 'никому :('
+                        },
+                        {
+                            val: 'same',
+                            text: 'никому...'
+                        }
+                    ]
                 }
             ]
-        }
-    })
-});
-
-app.get('/vtoraya', function(req, res) {
-    render(req, res, {
-        view: 'page-index',
-        title: 'Main page',
-        meta: {
-            description: 'Page description',
-            og: {
-                url: 'https://site.com',
-                siteName: 'Site name'
-            }
         },
-        quiz: {
-            quizText: 'A tak?',
-            title: 'Заголовок опроса',
-            questions: [
-                {
-                    text: 'WTF?',
-                    name: 'q1',
-                    options: [
-                        {
-                            val: 'better',
-                            text: 'стало лучше'
-                        },
-                        {
-                            val: 'worse',
-                            text: 'стало хуже'
-                        },
-                        {
-                            val: 'same',
-                            text: 'не вижу разницы'
-                        }
-                    ]
-                },
-                {
-                    text: 'Кому?',
-                    name: 'q2',
-                    options: [
-                        {
-                            val: 'better',
-                            text: 'никому!'
-                        },
-                        {
-                            val: 'worse',
-                            text: 'никому :('
-                        },
-                        {
-                            val: 'same',
-                            text: 'никому...'
-                        }
-                    ]
-                }
-            ]
-        }
+        lang: config.langs[0]
     })
 });
 
